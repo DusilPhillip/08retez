@@ -16,5 +16,34 @@ namespace P01
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string veta = textBox1.Text;
+            string samohlasky = "aeiouyáéěíóúůý";
+            string souhlasky = "bcčdďfghjklmnpqrřsštťvwxzž";
+            int pocetsamohlasky = 0;
+            int pocetsouhlasky = 0;
+
+            int celkem = veta.Length;
+            veta = veta.ToLower();
+            foreach( char i in veta)
+            {
+                if( samohlasky.Contains(i))
+                {
+                    pocetsamohlasky++;
+
+                }
+                else if(souhlasky.Contains(i))
+                {
+                    pocetsouhlasky++;
+                }
+
+            }
+
+            int pocett = celkem - pocetsamohlasky - pocetsouhlasky;
+            MessageBox.Show(" veta obsahuje " + pocetsouhlasky + " souhlasek " + pocetsamohlasky + "samohlasek a ostatnich znaku" + pocett);
+            
+        }
     }
 }
