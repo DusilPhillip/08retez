@@ -38,6 +38,16 @@ namespace P04
 
             textBox2.Text = veta;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string veta = textBox1.Text;
+            veta = veta.Replace('*', ' ');
+            textBox2.Text = veta;
+        }
+
     }
 }
+
 
