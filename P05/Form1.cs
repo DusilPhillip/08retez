@@ -16,5 +16,33 @@ namespace P05
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string veta = textBox1.Text;
+
+            string[] slova = veta.Split(' ');
+            int pocet = slova.Length;
+
+            MessageBox.Show("pocet slov je:" + pocet);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string veta = textBox2.Text;//   ahoj   ydar
+
+            string bezmezer = veta.Trim();//ahoj  ydar
+       
+            string[] slova = bezmezer.Split(' ');
+            int pocet = 0;
+            for( int i = 0; i < slova.Length; i++)
+            {
+                if(slova[i] != "")
+                {
+                    pocet++;
+                } 
+            }
+            MessageBox.Show("pocet slov je:" + pocet);
+        }
     }
 }
