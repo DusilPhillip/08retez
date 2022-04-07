@@ -25,15 +25,29 @@ namespace P06
             int i = 0;
             while( i < bezmezer.Length-1)
             {
-                if (bezmezer[i] == ' ')
+                if (bezmezer[i] ==' ' && bezmezer[i + 1] == ' ')
                 {
-                    if (bezmezer[i + 1] == ' ')
-                    {
                         bezmezer = bezmezer.Remove(i, 1);
-                    }
-                    else { i++; }
-                }
+                    
+                }else { i++; }
             }
+            textBox2.Text = bezmezer;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string veta = textBox1.Text;
+            string bezmezer = veta.Trim();
+
+            
+
+            if (bezmezer.Contains("  "))
+            {          
+                    bezmezer = bezmezer.Replace("  ", " "); 
+            }
+
+            textBox3.Text = bezmezer;
         }
     }
 }
