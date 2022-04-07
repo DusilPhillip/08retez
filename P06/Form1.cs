@@ -40,8 +40,6 @@ namespace P06
             string veta = textBox1.Text;
             string bezmezer = veta.Trim();
 
-            
-
             if (bezmezer.Contains("  "))
             {          
                     bezmezer = bezmezer.Replace("  ", " "); 
