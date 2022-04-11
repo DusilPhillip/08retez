@@ -45,9 +45,10 @@ namespace P07
             string abc = "abcdefghijklmnopqrstuvwxyz";
             string veta = textBox2.Text;
             string final = "";
+            int pozice = 0;
             
 
-            for(int i = 0; i < veta.Length; i++)
+            foreach(char i in veta)
             {
                 if ( veta[i] == '/')
                 {
@@ -55,7 +56,12 @@ namespace P07
                 }
                 else
                 {
-                   
+
+                    pozice = Array.IndexOf(morseovka, i);
+                    
+                        
+                    
+
 
                 }
 
